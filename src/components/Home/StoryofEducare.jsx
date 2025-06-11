@@ -22,8 +22,9 @@ const rotatingImagesSet2 = [
     storyPhoto2,
 ];
 const StoryofEducare = () => {
-    const currentImageSrc1 = useImageCarousel(rotatingImagesSet1, 2000); // First carousel
-    const currentImageSrc2 = useImageCarousel(rotatingImagesSet2, 2000);
+    const { currentImage: currentImageSrc1, isFading:fade1 } = useImageCarousel(rotatingImagesSet1, 2000);
+    const { currentImage: currentImageSrc2, isFading:fade2 } = useImageCarousel(rotatingImagesSet2, 2000);
+    
 
     return (
         <div className=' min-h-screen mt-20 px-10'><div className='text-[#655945] flex items-center justify-evenly px-10'><div className='flex flex-col gap-4 md:w-[60%]  sm:ml-10'><h2 className='font-semibold text-4xl'>The Story of <span className='font-bold'>Educare</span></h2>
@@ -38,21 +39,21 @@ const StoryofEducare = () => {
             <p className=' leading-relaxed mb-4'>
                 We specialize in a wide range of subjects across all grade levels, including math, science, English, and test preparation. Whether your child needs help catching up, getting ahead, or preparing for a specific exam, we are here to support their journey.
             </p>
-            <CustomButton /></div>
+            <CustomButton text={'Read more'}/></div>
             <div className='relative hidden md:flex items-center justify-center md:visible'>
                 <div className='relative -top-20 left-10'><Image width={250} height={350} src={frame1} /> <Image
                     src={currentImageSrc1}
                     alt={`Story Image 1`}
                     width={200}
                     height={250}
-                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-cover rounded-lg z-0 transition-opacity duration-500 ease-in-out opacity-0"
+                    className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-cover rounded-lg z-0 transition-opacity duration-500 ease-in-out ${fade1 ? 'opacity-5' : 'opacity-100'}`}
                 /></div>
                 <div className='relative top-26 right-20'><Image className=' ' width={300} height={350} src={frame2} /><Image
                     src={currentImageSrc2}
                     alt={`Story Image 2`}
                     width={240}
                     height={270}
-                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-cover rounded-lg z-1 transition-opacity duration-500 ease-in-out opacity-0"
+                    className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-cover rounded-lg z-1 transition-opacity duration-500 ease-in-out  ${fade2 ? 'opacity-5' : 'opacity-100'}`}
                 /></div>
             </div>
         </div>
