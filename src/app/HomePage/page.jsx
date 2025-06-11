@@ -4,6 +4,9 @@ import FeatureHighlights from '@/components/Home/FeatureHighlights';
 import StoryofEducare from '@/components/Home/StoryofEducare';
 import Ourway from '@/components/Home/Ourway';
 import Programs from '@/components/Home/Programs';
+import WorldMap from '@/components/Home/WorldMap';
+import MarqueeText from '@/components/Home/MarqueeText';
+import Subjects from '@/components/Home/Subjects';
 
 const HomePage = () => {
   return (
@@ -13,6 +16,9 @@ const HomePage = () => {
       <StoryofEducare/>
       <Ourway/>
       <Programs />
+      <Subjects />
+      <WorldMap />
+      <MarqueeText/>
     </div>
   )
 }

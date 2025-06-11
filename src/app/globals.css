@@ -25,6 +25,10 @@ padding: 0; */
   }
 }*/
 
+ .swiper-programs .swiper-pagination-bullet{
+  background-color: #8a1538;
+}
+
 .swiper-headline .swiper-pagination-bullet {
   background-color: #8a1538;
 }
