@@ -1,4 +1,3 @@
-// src/components/TestimonialCard.jsx
 import React from 'react';
 import Image from 'next/image';
 import quoteIconImage from '../../public/images/quote-mark.svg';
@@ -38,7 +37,6 @@ const TestimonialCard = ({ profileImage, testimonial, rating, reviewerName, revi
                     </div>
             </div>
 
-            {/* Quote Icon - Top Right */}
             <div className="absolute top-0 right-6 transform -translate-y-1/2 z-20">
                     <Image
                         src={quoteIconImage}
@@ -49,12 +47,10 @@ const TestimonialCard = ({ profileImage, testimonial, rating, reviewerName, revi
                     />
             </div>
 
-            {/* Testimonial Text */}
             <p className="text-base text-gray-700 leading-relaxed mb-3 z-10 text-left">
                 &quot;{testimonial}&quot;
             </p>
 
-            {/* Rating and Reviewer Info */}
             <div className="flex justify-between items-center z-10">
                 <StarRating rating={rating} />
                 <div className="text-right flex flex-col items-end">

@@ -9,9 +9,6 @@ const MissionCard = ({title,image,content}) => {
                     {title}
                 </h2>
                 <p className=" text-educare-primary leading-relaxed w-[85%]">{content}
-                    {/* To help students succeed with personalized, {' '}
-                    <span className="font-bold">one-to-one</span> tutoring that builds
-                    confidence, skills, and a love for learning. */}
                 </p>
             </div>
 

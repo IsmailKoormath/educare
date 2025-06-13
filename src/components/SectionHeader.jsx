@@ -1,4 +1,3 @@
-// src/components/SectionHeader.jsx
 import React from 'react';
 import Link from 'next/link';
 import CustomButton from './CustomButton'; 

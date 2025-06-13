@@ -1,11 +1,9 @@
-// src/app/demo-class/page.jsx
-'use client'; // Still needs to be a Client Component for form state
+'use client';
 
-import React, { useState } from 'react'; // Removed useEffect, useRef as they are no longer needed
-import FormField from '../../components/forms/FormField'; // Adjust path relative to this file
-import SelectField from '../../components/forms/SelectField'; // Adjust path relative to this file
+import React, { useState } from 'react'; 
+import FormField from '../../components/forms/FormField'; 
+import SelectField from '../../components/forms/SelectField'; 
 
-// Define dummy data for dropdowns (same as before)
 const curriculumOptions = [
     { value: 'ielts', label: 'IELTS' },
     { value: 'toefl', label: 'TOEFL' },
@@ -34,8 +32,7 @@ const courseOptions = [
     description: 'Fill out this form to book your free demo class with Educare.',
 };
 
-
-export default function DemoClassPage() { // Renamed from DemoClassModal, now a page component
+export default function DemoClassPage() { 
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -44,11 +41,6 @@ export default function DemoClassPage() { // Renamed from DemoClassModal, now a 
         course: '',
         message: '',
     });
-
-    // --- REMOVED: modalRef and related useEffects for closing the modal ---
-    // const modalRef = useRef(null);
-    // useEffect for handleClickOutside
-    // useEffect for handleEscape
 
     const handleChange = (e) => {
         const { id, value } = e.target;
@@ -61,8 +53,7 @@ export default function DemoClassPage() { // Renamed from DemoClassModal, now a 
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log('Form Submitted:', formData);
-        alert('Thank you for your submission! We will connect with you shortly.'); // User feedback
-        // Optional: Reset form after submission
+        alert('Thank you for your submission! We will connect with you shortly.'); 
         setFormData({
             name: '',
             email: '',
@@ -71,30 +62,19 @@ export default function DemoClassPage() { // Renamed from DemoClassModal, now a 
             course: '',
             message: '',
         });
-        // In a real app, you might also redirect the user after submission
     };
 
-    // --- REMOVED: Conditional rendering based on isOpen prop ---
-    // if (!isOpen) return null; // THIS LINE IS THE PROBLEM!
-
     return (
-        // --- Updated: Page-level container instead of modal overlay ---
-        // This container centers the form on the page
         <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
             <div
-                // ref={modalRef} // REMOVED: modalRef is not needed
-                className="max-w-xl w-full bg-white rounded-3xl p-6 md:p-8 lg:p-10 shadow-xl" // Now a page content container
+                className="max-w-xl w-full bg-white rounded-3xl p-6 md:p-8 lg:p-10 shadow-xl" 
             >
-                {/* --- REMOVED: Close Button --- */}
-                {/* <button onClick={onClose} ... > <svg>...</svg> </button> */}
 
-                {/* Page Header (retained from modal content) */}
                 <div className="text-center mb-8">
                     <h1 className="text-2xl md:text-3xl font-bold text-[#655945] mb-2">Book a Free Demo Class</h1>
                     <p className="text-[#655945] text-base md:text-lg">Fill up this form and we will connect you shortly</p>
                 </div>
 
-                {/* Form (remains the same) */}
                 <form onSubmit={handleSubmit}>
                     <FormField
                         id="name"
