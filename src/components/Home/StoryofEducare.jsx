@@ -27,7 +27,7 @@ const StoryofEducare = () => {
     
 
     return (
-        <div className=' min-h-screen mb-10 mt-20 px-10'><div className='text-[#655945] flex items-center justify-evenly px-10'><div className='flex flex-col gap-4 md:w-[60%]  sm:ml-10'><h2 className='font-semibold text-2xl sm:text-4xl'>The Story of <span className='font-bold'>Educare</span></h2>
+        <div className=' min-h-screen mb-10 mt-20 sm:px-10'><div className='text-[#655945] flex items-center justify-evenly px-10'><div className='flex flex-col gap-4 md:w-[60%]  sm:ml-10'><h2 className='font-semibold text-2xl sm:text-4xl'>The Story of <span className='font-bold'>Educare</span></h2>
             <p className=' mb-2 leading-relaxed'>
                 At <span className='font-bold'>Educare</span> education center, we believe that every student deserves personalized, focused attention to reach their fullest potential. Our mission is to empower students through one-on-one tutoring, creating customized learning plans tailored to each individual's unique needs, strengths, and learning styles.
             </p>

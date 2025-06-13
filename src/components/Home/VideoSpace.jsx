@@ -4,7 +4,7 @@ import youtube from '../../../public/images/youtube.svg'
 import Image from 'next/image'
 const VideoSpace = () => {
     return (
-        <div className='flex flex-col  py-6'>
+        <div className='flex flex-col px-3 md:px-0 py-6'>
             <h2 className='text-3xl mb-5 text-center text-[#655945]'>
                 Learn More About <span className='font-bold '>Our Space</span>
             </h2>
