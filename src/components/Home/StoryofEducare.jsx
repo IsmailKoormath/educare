@@ -27,7 +27,7 @@ const StoryofEducare = () => {
     
 
     return (
-        <div className=' min-h-screen mt-20 px-10'><div className='text-[#655945] flex items-center justify-evenly px-10'><div className='flex flex-col gap-4 md:w-[60%]  sm:ml-10'><h2 className='font-semibold text-4xl'>The Story of <span className='font-bold'>Educare</span></h2>
+        <div className=' min-h-screen mb-10 mt-20 px-10'><div className='text-[#655945] flex items-center justify-evenly px-10'><div className='flex flex-col gap-4 md:w-[60%]  sm:ml-10'><h2 className='font-semibold text-2xl sm:text-4xl'>The Story of <span className='font-bold'>Educare</span></h2>
             <p className=' mb-2 leading-relaxed'>
                 At <span className='font-bold'>Educare</span> education center, we believe that every student deserves personalized, focused attention to reach their fullest potential. Our mission is to empower students through one-on-one tutoring, creating customized learning plans tailored to each individual's unique needs, strengths, and learning styles.
             </p>
@@ -41,16 +41,16 @@ const StoryofEducare = () => {
             </p>
             <CustomButton text={'Read more'}/></div>
             <div className='relative hidden md:flex items-center justify-center md:visible'>
-                <div className='relative -top-20 left-10'><Image width={250} height={350} src={frame1} /> <Image
+                <div className='relative -top-20 left-10'><Image width={250} height={350} src={frame1} alt='frame1' /> <Image
                     src={currentImageSrc1}
-                    alt={`Story Image 1`}
+                    alt='Story Image '
                     width={200}
                     height={250}
                     className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-cover rounded-lg z-0 transition-opacity duration-500 ease-in-out ${fade1 ? 'opacity-5' : 'opacity-100'}`}
                 /></div>
-                <div className='relative top-26 right-20'><Image className=' ' width={300} height={350} src={frame2} /><Image
+                <div className='relative top-26 right-20'><Image className=' ' alt='frame 1' width={300} height={350} src={frame2} /><Image
                     src={currentImageSrc2}
-                    alt={`Story Image 2`}
+                    alt='Story Image 2'
                     width={240}
                     height={270}
                     className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-cover rounded-lg z-1 transition-opacity duration-500 ease-in-out  ${fade2 ? 'opacity-5' : 'opacity-100'}`}

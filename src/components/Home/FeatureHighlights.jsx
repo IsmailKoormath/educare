@@ -9,8 +9,8 @@ import Image from 'next/image';
 
 const features = [
     { icon: PersonalAttentionIcon, text: 'Personal Attention' },
-    { icon: GrowthMindsetIcon, text: 'Growth Mindset' },
     { icon: SkillDevelopmentIcon, text: 'Skill Development' },
+    { icon: GrowthMindsetIcon, text: 'Growth Mindset' },
     { icon: PassionateTeachingIcon, text: 'Passionate Teaching' },
   ];
 

@@ -10,25 +10,34 @@ import 'swiper/css/pagination';
 import grammarImg from '../../../public/images/grammar.png';
 import craftImg from '../../../public/images/craft.png';
 import artImg from '../../../public/images/art.png';
+import SectionHeader from '../SectionHeader';
 
 const Programs = () => {
     const programs = [
         { title: "English Grammar", content: 'Master the building blocks of writing and communication.', image: grammarImg },
         { title: 'Craft Classes', content: 'Unleash creativity with hands-on projects and artistic fun.', image: craftImg },
         { title: 'Art and Painting', content: 'Express yourself through colors, sketches, and designs', image: artImg },
+        { title: 'Craft Classes', content: 'Unleash creativity with hands-on projects and artistic fun.', image: craftImg },
+
     ];
 
     return (
-        <div className='px-10 py-10 flex flex-col items-center justify-center'>
-            <h1 className='text-3xl text-[#655945] mb-6'>Programs we offer <span className='font-bold'>for Kids</span></h1>
+        <div className='px-4 md:px-10 py-10 flex flex-col items-center justify-center'>
+            <SectionHeader title="Programs we offer" boldtitle="for Kids" />
+
             <Swiper
                 modules={[Autoplay, Pagination]}
                 autoplay={{ delay: 3000, disableOnInteraction: false }}
                 pagination={{ clickable: true }}
-                slidesPerView={3}
                 loop={true}
-                className="swiper-programs h-[230px]"
-            > 
+                breakpoints={{
+                    320: { slidesPerView: 1, spaceBetween: 20 },
+                    640: { slidesPerView: 1.2, spaceBetween: 20 },
+                    768: { slidesPerView: 2, spaceBetween: 20 },
+                    1024: { slidesPerView: 3, spaceBetween: 30 },
+                }}
+                className="w-full swiper-programs"
+            >
                 {programs.map((program, index) => (
                     <SwiperSlide key={index}>
                         <ProgramCard

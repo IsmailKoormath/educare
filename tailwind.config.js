@@ -18,8 +18,7 @@ module.exports = {
       },
       fontFamily: {
         bricolage: ["var(--font-bricolage)", "sans-serif"],
-        sans: ["Arial", "sans-serif"],
-        heading: ["Montserrat", "serif"],
+        poppins: ["var(--font-poppins)", "sans-serif"],
       },
     },
   },

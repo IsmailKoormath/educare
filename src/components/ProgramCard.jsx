@@ -4,8 +4,8 @@ import CustomButton from './CustomButton';
 
 const ProgramCard = ({ title, content, image }) => {
     return (
-        <div >
-            <div className='min-h-[100px] h-[180px] w-[450px] bg-[#FFF3E1] rounded-3xl p-6 flex flex-col justify-between relative overflow-visible'>
+        <div className='my-10 mr-5'>
+            <div className=' bg-[#FFF3E1] mt-[40px] rounded-3xl p-6 flex flex-col justify-between relative '>
             <div>
                 <h3 className='text-[#8A1538] text-lg font-semibold mb-3'>{title}</h3>
                 <p className='text-[#8A1538] text-sm w-[60%] mb-4'>{content}</p>

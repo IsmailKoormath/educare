@@ -1,41 +1,48 @@
 @import "tailwindcss";
-@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque&display=swap");
+
 * {
-  /* margin: 0;
-padding: 0; */
   box-sizing: border-box;
+  font-family: 'Bricolage Grotesque', sans-serif;
 }
 
-/* :root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+
+
+.exam-courses-swiper .swiper-pagination-bullet {
+  background-color: #ccc;
+  opacity: 0.6;
+  transition: background-color 0.3s, opacity 0.3s;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.exam-courses-swiper .swiper-pagination-bullet-active {
+  background-color: #8A1538; 
+  opacity: 1;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}*/
-
- .swiper-programs .swiper-pagination-bullet{
-  background-color: #8a1538;
+.exam-courses-swiper .swiper-pagination {
+  bottom: 0px !important;
 }
-
+.swiper-subjects .swiper-pagination-bullet,
+.testimonial-swiper .swiper-pagination-bullet,
+.swiper-programs .swiper-pagination-bullet,
 .swiper-headline .swiper-pagination-bullet {
   background-color: #8a1538;
 }
+/* .swiper-subjects .swiper-button-next,
+.swiper-subjects .swiper-button-prev{
+color: #8a1538;
+
+} */
+.swiper-subjects .swiper-pagination ,
+.testimonial-swiper .swiper-pagination ,
+.exam-courses-swiper .swiper-pagination,
 .swiper-headline .swiper-pagination{
   margin-top: 20px;
   position: relative;
 }
+
+
 body {
   background: var(--background);
   color: var(--foreground);

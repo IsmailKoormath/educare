@@ -12,7 +12,7 @@ const rotatingImages = [
 const Ourway = () => {
     const { currentImage, isFading } = useImageCarousel(rotatingImages, 3000);
     return (
-        <div className='flex  flex-wrap lg:flex-nowrap sm:px-28 py-10 gap-10 bg-[#F9F7F4] text-[#655945]'>
+        <div className='flex  flex-wrap lg:flex-nowrap px-8 sm:px-28 py-10 gap-10 bg-[#F9F7F4] text-[#655945]'>
             <div className='md:w-[40%]'>
                 <h2 className='font-semibold text-3xl mb-4 sm:mb-10'>Our way of <span className='font-bold'>Teaching</span></h2>
                 <ul className='list-disc list-inside flex flex-col gap-6'>
